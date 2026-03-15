@@ -60,6 +60,16 @@ void division()
     }
 }
 
+void square()
+{
+    float a;
+    printf("Enter the number: ");
+    scanf("%f", &a);
+
+    system("cls");
+    printf("Square Result: %.3f\n", a * a);
+}
+
 int main()
 {
 
@@ -73,7 +83,8 @@ int main()
         printf("2. Subtraction \n");
         printf("3. Multiplication \n");
         printf("4. Division \n");
-        printf("5. Exit \n");
+        printf("5. Square \n");
+        printf("6. Exit \n");
 
         printf("Enter your choice: ");
         scanf("%d", &choice);
@@ -98,6 +109,8 @@ int main()
             break;
 
         case 5:
+            square();
+        case 6:
             printf("Thank You for using our calculator ! ");
             exit(0);
 
