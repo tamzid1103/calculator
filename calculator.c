@@ -44,22 +44,25 @@ void division()
     float a, b;
     printf("Enter the first number: ");
     scanf("%f", &a);
+    
+    do {
+        printf("Enter the second number (cannot be zero): ");
+        scanf("%f", &b);
+        
+        if (b == 0.0f) {
+            system("cls");
+            printf("Error: Division by zero is not allowed!\n");
+            printf("Please try again.\n\n");
+        }
+    } while (b == 0.0f); 
 
-    printf("Enter the second number: ");
-    scanf("%f", &b);
-
-    if (b == 0)
-    {
-        system("cls");
-        printf("Error: Division by zero is not allowed.\n");
-    }
-    else
-    {
-        system("cls");
-        printf("Division Result: %.3f\n", a / b);
-    }
+    system("cls");
+    printf("Division Result: %.3f\n", a / b);
+    
+    printf("\nPress Enter to continue...");
+    getchar();   
+    getchar();   
 }
-
 int main()
 {
 
