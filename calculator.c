@@ -59,7 +59,18 @@ void division()
         printf("Division Result: %.3f\n", a / b);
     }
 }
+void percentage()
+{
+    float a, b;
+    printf("Enter the first number: ");
+    scanf("%f", &a);
 
+    printf("Enter the second number: ");
+    scanf("%f", &b);
+
+    system("cls");
+    printf("Percentage Rate: %.3f %\n", (a / b)*100 );
+}
 int main()
 {
 
@@ -73,7 +84,8 @@ int main()
         printf("2. Subtraction \n");
         printf("3. Multiplication \n");
         printf("4. Division \n");
-        printf("5. Exit \n");
+        printf("5. %Rate \n");
+        printf("6. Exit \n");
 
         printf("Enter your choice: ");
         scanf("%d", &choice);
@@ -98,6 +110,10 @@ int main()
             break;
 
         case 5:
+            percentage();
+            break;
+
+        case 6:
             printf("Thank You for using our calculator ! ");
             exit(0);
 
