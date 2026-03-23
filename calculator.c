@@ -59,6 +59,24 @@ void division()
         printf("Division Result: %.3f\n", a / b);
     }
 }
+void squareroot()
+{
+    float num;
+
+    printf("Enter a number: ");
+    scanf("%f", &num);
+
+    if (num < 0)
+    {
+        system("cls");
+        printf("Error: Cannot calculate.\n");
+    }
+    else
+    {
+        system("cls");
+        printf("Square Root Result: %.3f\n", sqrt(num));
+    }
+}
 
 int main()
 {
@@ -73,7 +91,8 @@ int main()
         printf("2. Subtraction \n");
         printf("3. Multiplication \n");
         printf("4. Division \n");
-        printf("5. Exit \n");
+        printf("5. Square Root \n");
+        printf("6. Exit \n");
 
         printf("Enter your choice: ");
         scanf("%d", &choice);
@@ -96,8 +115,11 @@ int main()
         case 4:
             division();
             break;
-
         case 5:
+            squareroot();
+            break;
+
+        case 6:
             printf("Thank You for using our calculator ! ");
             exit(0);
 
