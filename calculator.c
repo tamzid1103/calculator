@@ -98,7 +98,8 @@ int main()
             break;
 
         case 5:
-            printf("Thank You for using our calculator ! ");
+            printf("Thank You for using our calculator ! \n");
+            printf("Thanks again\n");
             exit(0);
 
         } // switch ending
